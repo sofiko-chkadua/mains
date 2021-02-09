@@ -1,0 +1,52 @@
+.page {
+ font-family: "Graphik LCG", Arial, sans-serif;
+  color: white;
+  margin: 0 auto;
+  /* background: linear-gradient(
+123.14deg, #07080A -18.14%, #15171B 362.3%);  */
+  background: -webkit-gradient(linear, left top, right top, color-stop(-18.14%, #07080a), color-stop(362.3%, #15171b));
+  background: -o-linear-gradient(left, #07080a -18.14%, #15171b 362.3%);
+  background: linear-gradient(to right, #07080a -18.14%, #15171b 362.3%);
+}
+
+.page__content {
+  max-width: 1160px;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+@media screen and (max-width: 1191px) {
+  .page__content {
+    max-width: 940px;
+  }
+}
+
+/* @media screen and (max-width: 1024px) { */
+@media screen and (max-width: 1179px) {
+  .page__content {
+    /* max-width: 620px; */
+    /* padding-left: 10px;
+    padding-right: 10px; */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page__content {
+    padding-left: 0px;
+    padding-right: 0px;
+max-width: 640px;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .page__content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+}
+/* @media screen and (max-width: 320px) {
+  .page__content {
+    max-width: 300px;
+  }
+} */

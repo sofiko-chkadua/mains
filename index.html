@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nedvex Group - агенство недвижимости в Сочи">
+    <meta name="keywords" content="Nedvex Nedvex Group Недвекс">
+    <meta property="og:image" content="img/logo.png">
+    <meta name="format-detection" content="telephone=no">
+    <title>Nedvex Group</title>
+    <link rel="stylesheet" href="style.css?123">
+      <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" >
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="js/jquery.maskedinput.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+      <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <script>
+        jQuery(document).ready(function ($) {
+            $("#form").submit(function () {
+
+                var str = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "send.php",
+                    data: str,
+                    success: function (msg) {
+                        if (msg == 'OK') {
+                            console.log("send")
+                            $('.popup_registration').fadeOut();
+                            $('.thanks-block').fadeIn();
+
+                        } else {
+                            console.log(msg)
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+    <script>
+    function noDigits(event) {
+        if ("1234567890".indexOf(event.key) != -1)
+          event.preventDefault();
+      }
+      </script>
+      
+<script>
+    $(document).ready(function(){
+        $('.lazy').slick({
+  lazyLoad: 'ondemand',
+  arrows: true,
+  centerMode: !1,
+  variableWidth: true,
+  infinite: false,
+  prevArrow:
+          '<button type = "button" class = "slick-prev" aria-disabled="false"> </ button>',
+        nextArrow:
+          '<button type = "button" class = "slick-next" aria-disabled="false"> </ button>',
+  slidesToShow: 2,
+  slidesToScroll: 1
+});
+    });
+</script>
+
+</head>
+
+<body class="page">
+    <div class="page__content">
+        <header class="header">
+            <div class="header__menu">
+                <a class="header__link" href="mailto:press@nedvex.ru">Пресса</a>
+                <a class="header__link" target="_blank" href="https://hh.ru/employer/1980593">Вакансии</a>
+                <a class="header__link" href="#footer">Контакты</a>
+            </div>
+            <div class="header__menu-burger">
+            </div>
+           <img class="header__logo" src="img/logomain.svg" alt="">
+            <div class="header__box">
+                <div class="header__icon"><a class="header__icon-phone" href="tel:8 800 333 82 48"></a></div>
+                <a class="header__phone" href="tel:8 800 333 82 48">8 800 333 82 48</a>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__card main__card_base">
+                <img class="main__back" src="img/base.png" alt="">
+                <img class="main__logo main__logo_base" src="img/logo1.svg" alt="">
+                <h2 class="main__header">База новостроек <br> Сочи  для агентств<br> недвижимости</h2>
+                <p class="main__description">Более 1700 объектов с&nbsp;ежедневными&nbsp;обновлениями и более&nbsp;50
+                    уникальных
+                    характеристик по каждому дому.
+                    90% агентов Сочи уже пользуются нашей платформой</p>
+                <a class="main__details main__details_oth">Узнать подробнее</a>
+                <a href="https://nedvex.ru/" target=_blank class="main__card-butt-enter">Вход</a>
+                <button class="main__card-butt-reg">Регистрация</button>
+
+            </div>
+
+            <div class="main__card main__card_salesdep">
+                <img class="main__back" src="img/salesdepart.png" alt="">
+                <img class="main__logo main__logo_salesdep" src="img/logo2.svg" alt="">
+                <h1 class="main__header main__header_mar-hover">Отделы<br>продаж<br>застройщиков</h1>
+                <p class="main__description">На протяжении последних 5&nbsp;лет помогаем застройщикам реализовать
+                    их&nbsp;проекты
+                    максимально эффективно.
+                    Доля&nbsp;наших сделок на рынке первичной недвижимости в&nbsp;Сочи более 20%</p>
+                <a class="main__details main__details-pdf">Узнать подробнее</a>
+                <a href="presentation.pdf" download class="main-butt-details main-butt-details-sales">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
+            </div>
+
+            <div class="main__card main__card_dev">
+                <img class="main__back" src="img/developm.png" alt="">
+                <img class="main__logo main__logo_dev" src="img/logo3.svg" alt="">
+                <h2 class="main__header main__header_mar-hover-oth">Наши<br> девелоперские <br>проекты</h2>
+                <p class="main__description">В 2020 году мы сами стали застройщиком&nbsp;и успешно запустили такие
+                    объекты
+                    как «Моне» и «Весна». Сейчас&nbsp;мы работаем с ведущими мировыми архитектурными
+                    и&nbsp;дизайнерскими&nbsp;бюро</p>
+                <a class="main__details">Узнать подробнее</a>
+                <a class=" main__details_look">Посмотреть проекты</a>
+                <button class="main-butt-details main-butt-details-devel main-det_hidden">УЗНАТЬ ПОДРОБНЕЕ</button>
+
+            </div>
+
+        </main>
+
+   <!-- слайдер див -->
+   <div class="ages-block">
+    <div class="list"></div>
+    <div class="flex lazy">
+        <div class="main__card main__card_base item moving_slayda" >
+            <img class="main__back" src="img/base.png" alt="">
+            <img class="main__logo main__logo_base" src="img/logo1.svg" alt="">
+            <h2 class="main__header">База новостроек <br> Сочи  для агентств<br> недвижимости</h2>
+            <p class="main__description">Более 1700 объектов с&nbsp;ежедневными&nbsp;обновлениями и более&nbsp;50
+                уникальных
+                характеристик по каждому дому.
+                90% агентов Сочи уже пользуются нашей платформой</p>
+            <a class="main__details main__details_oth">Узнать подробнее</a>
+            <a href="https://nedvex.ru/" target=_blank class="main__card-butt-enter">Вход</a>
+            <button class="main__card-butt-reg main__card-butt-reg-touch">Регистрация</button>
+
+        </div>
+        <div class="main__card main__card_salesdep item moving_slayda">
+            <img class="main__back" src="img/salesdepart.png" alt="">
+            <img class="main__logo main__logo_salesdep" src="img/logo2.svg" alt="">
+            <h1 class="main__header main__header_mar-hover">Отделы<br>продаж<br>застройщиков</h1>
+            <p class="main__description">На протяжении последних 5&nbsp;лет помогаем застройщикам реализовать
+                их&nbsp;проекты
+                максимально эффективно.
+                Доля&nbsp;наших сделок на рынке первичной недвижимости в&nbsp;Сочи более 20%</p>
+            <a class="main__details main__details-pdf">Узнать подробнее</a>
+            <a href="presentation.pdf" download class="main-butt-details main-butt-details-sales">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
+        </div>
+        <div class="main__card main__card_dev item moving_slayda">
+            <img class="main__back" src="img/developm.png" alt="">
+            <img class="main__logo main__logo_dev" src="img/logo3.svg" alt="">
+            <h2 class="main__header main__header_mar-hover-oth">Наши<br> девелоперские <br>проекты</h2>
+            <p class="main__description">В 2020 году мы сами стали застройщиком&nbsp;и успешно запустили такие
+                объекты
+                как «Моне» и «Весна». Сейчас&nbsp;мы работаем с ведущими мировыми архитектурными
+                и&nbsp;дизайнерскими&nbsp;бюро</p>
+            <a class="main__details">Узнать подробнее</a>
+            <a class=" main__details_look  main__details_look-touch">Посмотреть проекты</a>
+            <button class="main-butt-details main-butt-details-devel main-det_hidden">УЗНАТЬ ПОДРОБНЕЕ</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="footerbg">
+            <footer id="footer" class="footer">
+                <div class="footer__firstbox">
+                    <div class="footer__cont">
+                        <p class="footer__text footer__info_center">Краснодарский край, г. Сочи,<br> ул. Морской переулок, д. 1/1а</p>
+                        <a class="footer__link-other footer__info_center" target="_blank"
+                            href="https://yandex.ru/maps/-/CCUM4GWLCB">СМОТРЕТЬ НА
+                            КАРТЕ</a>
+                    </div>
+                    <div class="footer__cont">
+                        <a class="footer__link footer__info_center" href="tel:8 800 333 82 48">8 800 333 82 48</a>
+                        <a class="footer__link footer__info_center" target=_blank href="mailto:office@nedvex.ru">office@nedvex.ru</a>
+                        <a class="footer__link footer__info_center" target=_blank
+                            href="https://www.instagram.com/nedvexconsulting/">@nedvexconsulting</a>
+                    </div>
+                </div>
+                <div class="footer__line"></div>
+
+                <div class="footer__secondbox">
+
+                    <p class="footer__info footer__info_min">ИНН 2318043183</p>
+                    <p class="footer__info">ОГРН 1162366056830</p>
+                    <a class="footer__info footer__info_link" href="https://main.nedvex.ru/privacy" target="_blank">Политика конфиденциальности</a>
+                    <p class="footer__info">2021. Все права защищены</p>
+                </div>
+
+
+                <div class="footer__secondbox-middle">
+                    <div class="footer__box-middle">
+                        <p class="footer__info footer__info_min footer__info-mar footer__info-mar-oth">ИНН 2318043183</p>
+                        <p class="footer__info ">ОГРН 1162366056830</p>
+                    </div>
+                    <div class="footer__box-middle footer__box-middle-right">
+                        <a class="footer__info footer__info_middle " href="https://main.nedvex.ru/privacy" target="_blank">Политика<br>конфиденциальности</a>
+                        <p class="footer__info">2021. Все права защищены</p>
+                    </div>
+                </div>
+
+                <div class="footer__secondbox-other">
+                    <p class="footer__info footer__info_center footer__info_min">ИНН 2318043183</p>
+                    <p class="footer__info footer__info_center">ОГРН 1162366056830</p>
+
+                    <a class="footer__info footer__info_center" href="">Политика конфиденциальности</a>
+                    <p class="footer__info footer__info_center">2021. Все права защищены</p>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+    <div class="popup popup_developm ">
+        <div class="popup__container popup__container_devel">
+            <button class="popup__closedbutt popup__closedbutt-devel"></button>
+            <a target="_blank" href="https://mone.nedvex.ru/" class="popup__box">
+                <div class="popup__link">Перейти на страницу «Моне»</div>
+                <!-- <div class="popup__arrow"></div> -->
+            </a>
+
+            <a target="_blank" href="https://vesna.nedvex.ru/" class="popup__box">
+                <div class="popup__link popup__link_oth">Перейти на страницу «Весна»</div>
+                <!-- <div class="popup__arrow"></div> -->
+            </a>
+        </div>
+    </div>
+
+
+    <div class="popup  popup_dev">
+        <div class="popup__container popup__container_devel">
+            <button class="popup__closedbutt popup__closedbutt-dev"></button>
+            <a target="_blank" href="https://mone.nedvex.ru/" class="popup__box">
+                <div class="popup__link">Перейти на страницу «Моне»</div>
+                <!-- <div class="popup__arrow"></div> -->
+            </a>
+
+            <a target="_blank" href="https://vesna.nedvex.ru/" class="popup__box">
+                <div class="popup__link popup__link_oth">Перейти на страницу «Весна»</div>
+                <!-- <div class="popup__arrow"></div> -->
+            </a>
+        </div>
+    </div>
+
+    <div class="popup  popup_touch">
+        <div class="popup__container popup__container_devel">
+            <button class="popup__closedbutt popup__closedbutt-touch"></button>
+            <a target="_blank" href="https://mone.nedvex.ru/" class="popup__box">
+                <div class="popup__link">Перейти на страницу «Моне»</div>
+                <!-- <div class="popup__arrow"></div> -->
+            </a>
+
+            <a target="_blank" href="https://vesna.nedvex.ru/" class="popup__box">
+                <div class="popup__link popup__link_oth">Перейти на страницу «Весна»</div>
+                <!-- <div class="popup__arrow"></div> -->
+            </a>
+        </div>
+    </div>
+
+    <div class="popup popup_reg">
+        <div class="popup__container popup__container_mar">
+            <button class="popup__closedbutt popup__closedbutt-reg"></button>
+            <div class="form">
+                <form autocomplete="off" action="send.php" method="POST" id="form" class="form__body" novalidate>
+                    <h1 class="form__title">Заполните обязательные поля:</h1>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введено имя</span>
+                        <input id="formName" placeholder="Введите ваше имя" type="text" name="name"
+                            class="form__input form__border" onkeypress="noDigits(event)"  required>
+                    </div>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введена фамилия</span>
+                        <input id="formEmail" placeholder="Введите вашу фамилию" type="text" name="secondname"
+                            class="form__input form__border" onkeypress="noDigits(event)" required>
+                    </div>
+
+                    <div class="form__par">Выберите место работы</div>
+                    <div class="form__item">
+                        <div class="form__label"></div>
+                        <select name="post" class="form__select">
+                            <option class="test" value="hide">—</option>
+                            <option value="Работаю в агентстве недвижимости">Работаю в агентстве недвижимости</option>
+                            <option value="Частный агент">Частный агент</option>
+                            <option  value="Хочу подключить свое агентство">Хочу подключить свое агентство</option>
+                        </select>
+                    </div>
+                    <div class="form__item form__item_type_companyName form__item_hidden">
+                        <span class="form__error form__error_hidden">Заполните обязательное поле</span>
+                        <input id="formName" placeholder="Введите название вашей компании" type="text"
+                            name="companyname" class="form__input form__border"  required>
+                    </div>
+                    <div class="form__item form__item_type_job form__item_hidden">
+                        <span class="form__error form__error_hidden">Заполните обязательное поле</span>
+                        <input id="formName" placeholder="Введите название должности" type="text" name="job"
+                            class="form__input form__border" required>
+                    </div>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введен номер телефона</span>
+                        <input id="phone" placeholder="Введите номер телефона"  type="tel" name="phone"
+                            class="form__input form__border" required>
+                    </div>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введен email</span>
+                        <input id="formName" placeholder="Введите ваш e-mail" type="email" name="email"
+                            class="form__input form__border" required>
+                    </div>
+
+                    <button type="submit" class="form__button" disabled>Отправить</button>
+                </form>
+               <p class="form__politic">Нажимая эту кнопку, вы соглашаетесь с&nbsp;<a href="https://main.nedvex.ru/privacy" target=_blank class="form__link-politic">политикой&nbsp;конфиденциальности</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="thanks-block">
+        <div class="popup__container">
+            <button class="popup__closedbutt popup__closedbutt_oth popup__clos-thanks"></button>
+            <div class="popup__cont">
+                <h2 class="popup__title ">Спасибо за вашу заявку!</h2>
+                <p class="popup__subtitle popup__subtitle-thanks">Мы свяжемся с вами в&nbsp;ближайшее время</p>
+            </div>
+            <a href="index.html"><button class="popup__butt popup__butt_thanks">Вернуться на главную</button></a>
+        </div>
+    </div>
+
+    <div class="popup popup_registration">
+        <div class="popup__container popup__container_mar">
+            <button class="popup__closedbutt popup__closed-mar"></button>
+            <div class="form">
+                <form autocomplete="off" action="send.php" method="POST" id="form" class="form__body" novalidate>
+                    <h1 class="form__title">Заполните обязательные поля:</h1>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введено имя</span>
+                        <input id="formName" placeholder="Введите ваше имя" type="text" name="name"
+                            class="form__input form__border" onkeypress="noDigits(event)"  required>
+                    </div>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введена фамилия</span>
+                        <input id="formEmail" placeholder="Введите вашу фамилию" type="text" name="secondname"
+                            class="form__input form__border" onkeypress="noDigits(event)" required>
+                    </div>
+
+                    <div class="form__par">Выберите место работы</div>
+                    <div class="form__item">
+                        <div class="form__label"></div>
+                        <select name="post" class="form__select">
+                            <option class="test" value="hide">—</option>
+                            <option value="Работаю в агентстве недвижимости">Работаю в агентстве недвижимости</option>
+                            <option value="Частный агент">Частный агент</option>
+                            <option  value="Хочу подключить свое агентство">Хочу подключить свое агентство</option>
+                        </select>
+                    </div>
+                    <div class="form__item form__item_type_companyName form__item_hidden">
+                        <span class="form__error form__error_hidden">Заполните обязательное поле</span>
+                        <input id="formName" placeholder="Введите название вашей компании" type="text"
+                            name="companyname" class="form__input form__border"  required>
+                    </div>
+                    <div class="form__item form__item_type_job form__item_hidden">
+                        <span class="form__error form__error_hidden">Заполните обязательное поле</span>
+                        <input id="formName" placeholder="Введите название должности" type="text" name="job"
+                            class="form__input form__border" required>
+                    </div>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введен номер телефона</span>
+                        <input id="phone" placeholder="Введите номер телефона"  type="tel" name="phone"
+                            class="form__input form__border" required>
+                    </div>
+                    <div class="form__item">
+                        <span class="form__error form__error_hidden">Некорректно введен email</span>
+                        <input id="formName" placeholder="Введите ваш e-mail" type="email" name="email"
+                            class="form__input form__border" required>
+                    </div>
+
+                    <button type="submit" class="form__button" disabled>Отправить</button>
+                                      <p class="form__politic">Нажимая эту кнопку, вы соглашаетесь с&nbsp;<a href="https://main.nedvex.ru/privacy" target=_blank class="form__link-politic">политикой&nbsp;конфиденциальности</a></p>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="popup popup_menu">
+        <div class="popup__container popup__container_menu">
+            <div class="popup__nav">
+                <button class="popup__closedbutt-menu"></button>
+                <img class="popup__logo" src="img/logodark.svg" alt="">
+                <div class="popup__box-oth">
+                    <div class="popup__icon"></div>
+                    <a class="popup__phone" href="tel:8 800 333 82 48">8 800 333 82 48</a>
+                </div>
+            </div>
+            <a class="popup__link-menu" target="_blank" href="mailto:press@nedvex.ru">Пресса</a>
+            <a class="popup__link-menu" target="_blank" href="https://hh.ru/employer/1980593">Вакансии</a>
+            <a class="popup__link-menu popup__link-menu-contact" href="#footer">Контакты</a>
+            <div class="popup__box-hidden">
+                <div class="popup__icon"></div>
+                <a class="popup__phone" href="tel:8 800 333 82 48">8 800 333 82 48</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/commonoth.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

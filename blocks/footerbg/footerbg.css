@@ -1,0 +1,49 @@
+
+.footerbg {
+    background: url(../../img/patt.png) no-repeat bottom 83px left 50%;  }
+
+    @media screen and (max-width: 1194px) {
+        .footerbg {
+            /* background: url(../../img/patt.png) no-repeat bottom 83px left 50%; */
+            background: url(../../img/patt.png) no-repeat bottom 103px left 50%;        
+
+        }
+        }
+
+    @media screen and (max-width: 1023px) {
+        .footerbg {
+            background: url(../../img/patt.png) no-repeat bottom 103px left 50%;
+        }
+        }
+
+@media screen and (max-width: 978px) {
+.footerbg {
+    background: url(../../img/patt.png) no-repeat bottom 143px left 50%;
+
+}
+}
+
+@media screen and (max-width: 375px) {
+    .footerbg {
+        background: url(../../img/patt.png) no-repeat bottom 171px left 50%;
+    }
+              }
+
+@media screen and (max-width: 373px) {
+    .footerbg {
+        background: url(../../img/patt.png) no-repeat bottom 141px left 50%;
+      }
+    }
+    @media screen and (max-width: 360px) {
+        .footerbg {
+            background: url(../../img/patt.png) no-repeat bottom 172px left 50%;
+        }
+        }
+  
+        
+    @media screen and (max-width: 320px) {
+        .footerbg {
+            background: url(../../img/patt.png) no-repeat bottom 172px left 50%;
+          }
+        }
+      
